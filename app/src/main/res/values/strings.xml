@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">SiGizi</string>
+    <string name="signup">SignUp Now</string>
+    <string name="login">Login</string>
+    <string name="title_signup_page">Signup for more story</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="message_login_page">Login</string>
+    <string name="title_login_page">Sudah siap untuk memulai cerita?</string>
+    <string name="name">Indriyani Saputri</string>
+    <string name="message_main_page">Selamat Belajar di Dicoding.</string>
+    <string name="greeting">Halo,</string>
+    <string name="logout">Keluar</string>
+    <string name="empty_image_warning">Please select an image first</string>
+    <string name="title_menu_1">Pantau Perkembangan buah hati</string>
+    <string name="deskripsi">deskripsi</string>
+    <string name="nama">Indriyani Saputri</string>
+    <string name="title_menu_2">Pantau Perkembangan buah hati</string>
+    <string name="title_menu_3">Welcome to Pixtale: Your Gateway to Visual Storytelling</string>
+    <string name="title_menu_4">Alumni Terpercaya di Berbagai Perusahaan</string>
+    <string name="desc_menu_1">Pantau Catat Perkembangan Buah Hati Bunda mulai dari berat badan, tinggi badan, dan ciri-ciri fisik mereka.</string>
+    <string name="desc_menu_2">Pantau Catat Perkembangan Buah Hati Bunda mulai dari berat badan, tinggi badan, dan ciri-ciri fisik mereka.</string>
+    <string name="desc_menu_3">Embark on Pixtale: Share your world with stunning photos and captivating stories. Simplified storytelling.</string>
+    <string name="desc_menu_4">Sertifikat yang membuktikan pengetahuan fundamental beserta keterampilan nyata yang diinginkan perusahaan global.</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="retry">Coba lagi</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_artikel">Artikel</string>
+    <string name="title_forum">Forum</string>
+    <string name="title_profile">Profile</string>
+    <string name="descmainlogo1">SIGIZI</string>
+    <string name="descmainlogo2">Mari Cegah Stunting pada Anak</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Stunting pada anak 2 bulan</string>
+    <string name="content_description_media">Image</string>
+<string name="action_1"></string>
+    <string name="action_2"></string>
+    <string name="secondary_text">anak saya sudah stunting dan terkadang tidak nafsu makan</string>
+
+</resources>

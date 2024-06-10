@@ -1,0 +1,114 @@
+a<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/gradient"
+        android:backgroundTint="#80B9AD">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <!-- ImageView -->
+
+            <!-- MaterialButton aligned to the end of the ImageView -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="28dp"
+                android:contentDescription="@string/content_description_media"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@id/imageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/materialButton"
+                app:layout_constraintVertical_bias="0.744"
+                app:srcCompat="@drawable/bayi" />
+
+            <!-- TextView below ImageView -->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/glass_morph_background"
+                android:padding="0dp"
+                android:textColor="@color/white"
+                app:icon="@drawable/baseline_keyboard_arrow_right_24"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@color/white"
+                app:layout_constraintStart_toEndOf="@id/layoutuser"
+                app:layout_constraintTop_toBottomOf="@id/textname"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="-5dp" />
+
+            <TextView
+                android:id="@+id/textname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Satrio Wicaksono"
+                android:textSize="17sp"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <!-- TextView below ImageView -->
+            <LinearLayout
+                android:id="@+id/layoutuser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/namebg"
+                android:orientation="horizontal"
+                android:padding="2sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textname">
+
+                <TextView
+                    android:id="@+id/tv_detail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Stunting"
+                    android:textColor="@color/white"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/create_story"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="92dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/secondprimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

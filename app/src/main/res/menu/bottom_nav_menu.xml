@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home"
+        android:title="@string/title_home"
+        app:itemBackground="@drawable/glass_morph_background"/>
+
+    <item
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/blogger"
+        android:title="@string/title_artikel"
+        app:itemBackground="@drawable/glass_morph_background"/>
+
+    <item
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/chat"
+        android:title="@string/title_forum"
+        app:itemBackground="@drawable/glass_morph_background"/>
+
+    <item
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:title="@string/title_profile"
+        app:itemBackground="@drawable/glass_morph_background"/>
+
+</menu>

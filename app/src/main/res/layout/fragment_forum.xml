@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Media -->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/stunting"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/content_description_media"
+                />
+
+                <LinearLayout
+                    android:id="@+id/layoutuser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/namebg"
+                    android:orientation="horizontal"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginStart="2dp"
+                    android:padding="2sp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/user_avatar"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="1dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/avatar"
+                        app:riv_corner_radius="30dp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/nama"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@drawable/bg_3">
+
+                <!-- Title, secondary and supporting text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/secondary_text"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="?android:attr/textColorSecondary"
+                    />
+
+            </LinearLayout>
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    app:icon="@drawable/heart_icon"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconTint="@color/white"
+                    android:backgroundTint="@color/secondprimary"
+                    android:textColor="@color/white"
+                    android:padding="0dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    app:icon="@drawable/blogger"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconTint="@color/white"
+                    android:backgroundTint="@color/secondprimary"
+                    android:textColor="@color/white"
+                    android:padding="0dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/create_story"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="92dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/secondprimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
