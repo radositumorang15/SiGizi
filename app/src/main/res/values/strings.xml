@@ -36,8 +36,173 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title">Stunting pada anak 2 bulan</string>
     <string name="content_description_media">Image</string>
-<string name="action_1"></string>
+    <string name="action_1"></string>
     <string name="action_2"></string>
     <string name="secondary_text">anak saya sudah stunting dan terkadang tidak nafsu makan</string>
+
+    // isi fitur nutrisi
+    <string-array name="list_umur_bayi">
+        <item>Umur 0 - 5 bulan</item>
+        <item>Umur 6 - 11 bulan</item>
+        <item>Umur 12 - 17 bulan</item>
+        <item>Umur 18 - 23 bulan</item>
+        <item>Umur 24 - 29 bulan</item>
+        <item>Umur 30 - 35 bulan</item>
+    </string-array>
+
+    <string-array name="jenis_nutrisi">
+        <item>Energi: 550 kkal/hari.
+            Protein: 9 gram/hari.
+            Lemak total: 31 gram/hari.
+            Air: 700 ml/hari.
+            Vitamin A: 375 RE/hari.
+            Vitamin D: 10 mcg/hari.
+            Vitamin E: 4 mcg/hari.
+            Vitamin K: 5 mcg/hari.
+            Folat: 80 mcg/hari.
+            Kalsium: 200 mg/hari.
+            Fosfor: 100 mg/hari.
+            Zat Besi: 0,3 mg/hari.
+            Seng: 1,1 mg/hari.</item>
+        <item>Energi: 800 kkal/hari.
+            Protein: 15 gram/hari.
+            Lemak total: 35 gram/hari.
+            Air: 900 ml/hari.
+            Vitamin A: 400 RE/hari.
+            Vitamin D: 10 mcg/hari.
+            Vitamin E: 5 mcg/hari.
+            Vitamin K: 10 mcg/hari.
+            Folat: 80 mcg/hari.
+            Kalsium: 270 mg/hari.
+            Fosfor: 275 mg/hari.
+            Zat Besi: 11 mg/hari.
+            Seng: 3 mg/hari.</item>
+        <item>Energi: Sekitar 1000 kkal/hari.
+            Protein: Sekitar 13 gram/hari.
+            Lemak: Sekitar 40 gram/hari, dengan penekanan pada lemak sehat seperti omega-3 dan omega-6.
+            Karbohidrat: Sekitar 130 gram/hari.
+            Serat: Sekitar 19 gram/hari.
+            Air: Sekitar 1.3 liter/hari.
+            Vitamin A: 300 mcg/hari.
+            Vitamin D: 10 mcg/hari.
+            Vitamin E: 6 mg/hari.
+            Vitamin K: 30 mcg/hari.
+            Folat: 80 mcg/hari.
+            Kalsium: 700 mg/hari.
+            Fosfor: 460 mg/hari.
+            Zat Besi: 7 mg/hari.
+            Seng: 3 mg/hari.</item>
+        <item>Energi: 1350 kkal/hari
+            Protein: 15 g/hari
+            Lemak total: 35 g/hari
+            Omega 3: 0,5 g/hari
+            Omega 6: 4,4 g/hari
+            Karbohidrat: 105 g/hari
+            Serat: 11 g/hari
+            Air: 900 ml/hari
+            Vitamin A: 400 RE/hari
+            Vitamin B1 (Thiamin): 0,3 mg/hari
+            Vitamin B2 (Riboflavin): 0,4 mg/hari
+            Vitamin B3 (Niasin): 4 mg/hari
+            Vitamin B5 (Asam Pantotenat): 1,8 mg/hari
+            Vitamin B6: 0,3 mg/hari
+            Asam Folat: 80 mcg/hari
+            Vitamin B12: 1,5 mcg/hari
+            Biotin: 6 mcg/hari
+            Kolin: 150 mg/hari
+            Vitamin C: 50 mg/hari
+            Vitamin D: 10 mcg/hari
+            Vitamin E: 5 mcg/hari
+            Vitamin K: 10 mcg/hari</item>
+        <item>Energi: Sekitar 1000-1400 kkal/hari
+            Protein: 13-15 g/hari
+            Lemak: 35-40 g/hari
+            Karbohidrat: 100-140 g/hari
+            Serat: 19 g/hari
+            Air: 1300 ml/hari
+            Vitamin A: 300-400 RE/hari
+            Vitamin B1 (Thiamin): 0,5 mg/hari
+            Vitamin B2 (Riboflavin): 0,5 mg/hari
+            Vitamin B3 (Niasin): 6 mg/hari
+            Vitamin B6: 0,5 mg/hari
+            Vitamin B12: 0,9 mcg/hari
+            Vitamin C: 15 mg/hari
+            Vitamin D: 5 mcg/hari
+            Vitamin E: 6 mg/hari
+            Vitamin K: 30 mcg/hari
+            Kalsium: 700 mg/hari
+            Zat Besi: 7 mg/hari
+            Zink: 3 mg/hari</item>
+        <item>Energi: Sekitar 1100-1400 kkal/hari
+            Protein: 13-15 g/hari
+            Lemak: 35-40 g/hari
+            Karbohidrat: 100-140 g/hari
+            Serat: 19 g/hari
+            Air: 1300 ml/hari
+            Vitamin A: 300-400 RE/hari
+            Vitamin B1 (Thiamin): 0,5 mg/hari
+            Vitamin B2 (Riboflavin): 0,5 mg/hari
+            Vitamin B3 (Niasin): 6 mg/hari
+            Vitamin B6: 0,5 mg/hari
+            Vitamin B12: 0,9 mcg/hari
+            Vitamin C: 15 mg/hari
+            Vitamin D: 5 mcg/hari
+            Vitamin E: 6 mg/hari
+            Vitamin K: 30 mcg/hari
+            Kalsium: 700 mg/hari
+            Zat Besi: 7 mg/hari
+            Zink: 3 mg/hari</item>
+    </string-array>
+
+    <string-array name="jenis_makanan">
+        <item>ASI (Air Susu Ibu): Ini adalah sumber utama nutrisi untuk bayi, terutama di bulan-bulan pertama. ASI mengandung energi, protein, lemak, dan berbagai vitamin dan mineral yang dibutuhkan bayi.
+            Bubur Beras: Bubur beras yang diencerkan dengan ASI atau formula bayi bisa menjadi sumber energi dan karbohidrat yang baik.
+            Puree Buah dan Sayur: Puree dari buah-buahan seperti pisang, apel, atau alpukat, serta sayuran seperti wortel dan labu, kaya akan vitamin dan mineral.
+            Daging Ayam atau Daging Merah: Daging yang dihaluskan dapat memberikan protein dan zat besi yang penting untuk perkembangan otak bayi.
+            Tahu atau Tempe: Kedua makanan ini merupakan sumber protein nabati yang baik dan bisa dijadikan alternatif bagi bayi yang alergi terhadap protein hewani.
+            Telur: Kuning telur kaya akan vitamin D dan E, serta lemak yang baik untuk pertumbuhan bayi.
+            Sereal Bayi yang Diperkaya: Sereal yang diperkaya dengan zat besi dan folat dapat membantu memenuhi kebutuhan nutrisi tersebut.
+            Yogurt: Yogurt khusus untuk bayi (tanpa pemanis tambahan) bisa menjadi sumber kalsium dan probiotik</item>
+        <item>Bubur Sereal Beras Merah - Sereal beras merah kaya akan karbohidrat dan serat. Anda bisa menambahkan buah seperti pisang atau apel untuk menambahkan vitamin dan rasa.
+            Purée Buah dan Sayur - Buah seperti alpukat dan pisang serta sayuran seperti brokoli dan labu kuning adalah sumber yang baik dari vitamin dan mineral.
+            Daging Ayam atau Ikan - Daging ayam atau ikan yang dihaluskan merupakan sumber protein yang baik.
+            Tahu dan Tempe - Kedua makanan ini kaya akan protein dan zat besi.
+            Kuning Telur - Kuning telur adalah sumber vitamin D dan lemak sehat.</item>
+        <item>Buah-buahan: Seperti alpukat, pisang, dan beri yang kaya akan vitamin dan serat.
+                Sayuran: Brokoli, labu, dan wortel yang merupakan sumber vitamin A, K, dan serat.
+                Biji-bijian: Quinoa, oatmeal, dan biji-bijian utuh lainnya untuk energi dan serat.
+                Susu dan Produk Susu: Yogurt dan keju untuk kalsium dan protein.
+                Daging dan Ikan: Untuk protein dan zat besi.</item>
+        <item>Bubur Beras Merah atau Oatmeal: Kaya akan karbohidrat dan serat, serta dapat diberikan bersama ASI atau susu formula untuk menambah energi.
+            Daging Ayam atau Ikan: Sumber protein yang baik dan mengandung omega-3, terutama ikan seperti salmon.
+            Alpukat: Tinggi lemak baik dan mengandung vitamin E serta omega-6.
+            Tahu dan Tempe: Alternatif sumber protein nabati yang juga mengandung kalsium dan zat besi.
+            Sayuran Hijau: Seperti bayam dan brokoli, yang kaya akan vitamin A, C, K, dan folat.
+            Buah-buahan: Seperti pisang, mangga, dan pepaya yang kaya akan vitamin dan mineral, termasuk vitamin C dan A.
+            Telur: Khususnya kuning telur yang kaya akan biotin, kolin, dan vitamin B12.
+            Sereal Bayi yang Diperkaya: Pilih yang diperkaya dengan vitamin B kompleks dan zat besi.
+            Yogurt: Pilih yogurt tanpa pemanis tambahan sebagai sumber kalsium dan vitamin D.
+            Kacang-kacangan: Seperti kacang polong yang dihaluskan, baik untuk protein dan serat.</item>
+        <item>Nasi, Roti, atau Pasta: Sumber utama karbohidrat dan memberikan energi yang dibutuhkan untuk aktivitas sehari-hari.
+            Daging Merah, Ayam, atau Ikan: Kaya akan protein dan zat besi, penting untuk pertumbuhan dan perkembangan otot serta otak.
+            Telur: Baik untuk protein dan vitamin B12, serta vitamin D yang membantu penyerapan kalsium.
+            Susu dan Produk Olahan Susu: Seperti keju dan yogurt, yang merupakan sumber kalsium dan vitamin D yang baik.
+            Buah-buahan: Seperti jeruk, stroberi, dan kiwi yang kaya akan vitamin C, dan pisang yang kaya akan serat.
+            Sayuran: Seperti wortel untuk vitamin A, bayam untuk vitamin K, dan brokoli yang kaya akan serat.
+            Kacang-kacangan dan Biji-bijian: Sumber serat, zat besi, dan zink yang baik.
+            Minyak Ikan: Untuk asupan omega-3, yang penting untuk perkembangan otak.
+            Air: Pastikan bayi mendapatkan cukup air untuk hidrasi yang baik.
+            Makanan yang Diperkaya: Seperti sereal yang diperkaya dengan vitamin B dan zat besi.</item>
+        <item>Nasi, Roti Gandum, atau Pasta: Sumber utama karbohidrat dan serat, memberikan energi yang dibutuhkan untuk aktivitas sehari-hari.
+            Daging Merah, Ayam, atau Ikan: Kaya akan protein dan zat besi, penting untuk pertumbuhan dan perkembangan otot serta otak.
+            Telur: Baik untuk protein, vitamin B12, dan vitamin D, yang membantu penyerapan kalsium.
+            Susu dan Produk Olahan Susu: Seperti keju dan yogurt, yang merupakan sumber kalsium dan vitamin D yang baik.
+            Buah-buahan: Seperti jeruk, stroberi, dan kiwi yang kaya akan vitamin C, dan pisang yang kaya akan serat.
+            Sayuran: Seperti wortel untuk vitamin A, bayam untuk vitamin K, dan brokoli yang kaya akan serat.
+            Kacang-kacangan dan Biji-bijian: Sumber serat, zat besi, dan zink yang baik.
+            Minyak Ikan: Untuk asupan omega-3, yang penting untuk perkembangan otak.
+            Air: Pastikan bayi mendapatkan cukup air untuk hidrasi yang baik.
+            Makanan yang Diperkaya: Seperti sereal yang diperkaya dengan vitamin B dan zat besi.</item>
+    </string-array>
 
 </resources>
