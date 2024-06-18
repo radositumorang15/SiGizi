@@ -15,7 +15,11 @@
         android:id="@+id/navigation_dashboard"
         android:name="com.example.sigizi.view.artikel.ArtikelFragment"
         android:label="@string/title_artikel"
-        tools:layout="@layout/fragment_artikel" />
+        tools:layout="@layout/fragment_artikel">
+    <action
+        android:id="@+id/action_artikelActivity_to_artikelFragment"
+        app:destination="@id/navigation_dashboard" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"

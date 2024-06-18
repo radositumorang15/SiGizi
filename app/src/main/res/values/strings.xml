@@ -2,25 +2,21 @@
     <string name="app_name">SiGizi</string>
     <string name="signup">SignUp Now</string>
     <string name="login">Login</string>
-    <string name="title_signup_page">Signup for more story</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="message_login_page">Login</string>
-    <string name="title_login_page">Sudah siap untuk memulai cerita?</string>
     <string name="name">Indriyani Saputri</string>
-    <string name="message_main_page">Selamat Belajar di Dicoding.</string>
     <string name="greeting">Halo,</string>
     <string name="logout">Keluar</string>
     <string name="empty_image_warning">Please select an image first</string>
     <string name="title_menu_1">Pantau Perkembangan buah hati</string>
     <string name="deskripsi">deskripsi</string>
     <string name="nama">Indriyani Saputri</string>
-    <string name="title_menu_2">Pantau Perkembangan buah hati</string>
-    <string name="title_menu_3">Welcome to Pixtale: Your Gateway to Visual Storytelling</string>
-    <string name="title_menu_4">Alumni Terpercaya di Berbagai Perusahaan</string>
+    <string name="title_menu_3">Forum Ibu</string>
+    <string name="title_menu_2">Edukasi Nutrisi Ibu</string>
     <string name="desc_menu_1">Pantau Catat Perkembangan Buah Hati Bunda mulai dari berat badan, tinggi badan, dan ciri-ciri fisik mereka.</string>
-    <string name="desc_menu_2">Pantau Catat Perkembangan Buah Hati Bunda mulai dari berat badan, tinggi badan, dan ciri-ciri fisik mereka.</string>
-    <string name="desc_menu_3">Embark on Pixtale: Share your world with stunning photos and captivating stories. Simplified storytelling.</string>
+    <string name="desc_menu_2">Kami menyiapkan beberapa rekomendasi nutrisi untuk Si Buah Hati</string>
+    <string name="desc_menu_3">Kami mengundang para Ibu untuk berbagi pengalaman dan saling mengedukasi lewat Forum</string>
     <string name="desc_menu_4">Sertifikat yang membuktikan pengetahuan fundamental beserta keterampilan nyata yang diinginkan perusahaan global.</string>
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
@@ -39,6 +35,64 @@
     <string name="action_1"></string>
     <string name="action_2"></string>
     <string name="secondary_text">anak saya sudah stunting dan terkadang tidak nafsu makan</string>
+
+
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+
+    <string name="intro_title">Selamat Datang di Aplikasi siGizi!</string>
+    <string name="intro_text">Kami senang Anda bergabung dalam upaya meningkatkan kesehatan dan gizi keluarga. Yuk isi pertanyaan berikut</string>
+    <string name="intro_start">Ayo!</string>
+
+    <string name="pertanyaan2">Apakah anak Anda mengalami pertumbuhan yang lambat dibandingkan anak-anak seusianya?</string>
+
+    <string name="pertanyaan3">Apakah tinggi badan anak Anda lebih rendah dari rata-rata anak seusianya?</string>
+
+
+    <string name="pertanyaan4">Bagaimana pola makan anak Anda sehari-hari? (Pilih semua yang sesuai)</string>
+    <string name="makanan1">Cukup protein (daging, ikan, telur)</string>
+    <string name="makanan2">Cukup sayur dan buah</string>
+    <string name="makanan3">Banyak karbohidrat (nasi, roti)</string>
+    <string name="makanan4">Kurang bervariasi</string>
+
+    <string name="pertanyaan5">Apakah anak Anda mendapatkan ASI eksklusif selama 6 bulan pertama?</string>
+
+    <string name="pertanyaan6">Seberapa sering anak Anda mengalami sakit (seperti diare, infeksi saluran pernapasan) dalam 6 bulan terakhir?</string>
+    <string name="sering">Sangat sering</string>
+    <string name="sering1">Cukup sering</string>
+    <string name="sering2">Jarang</string>
+    <string name="sering3">Tidak Pernah</string>
+
+
+    <string name="names">Siapakah nama anak anda?</string>
+    <string name="name1">nama lengkan atau nama panggilan</string>
+    <string name="laki">Laki-Laki</string>
+    <string name="cewek">Perempuan</string>
+
+    <string name="gender">Jenis kelamin</string>
+    <string name="gender1">Jenis kelamin anak anda?</string>
+
+    <string name="umur">Berapa umur anak anda?</string>
+    <string name="umur1">Umur dalam bentuk bulan</string>
+
+    <string name="beratbadan">Berat badan anak?</string>
+    <string name="how_fat_question_text" />
+    <string name="how_fat_min">2</string>
+    <string name="how_fat_max">13</string>
+
+    <string name="lingkarkepala">Lingkar Kepala anak?</string>
+    <string name="min">33</string>
+    <string name="max">50</string>
+
+    <string name="tinggibadan">Tinggi anak?</string>
+    <string name="mins">33</string>
+    <string name="maxs">50</string>
+
+
+    <string name="finish_question_title">Sudah Selesai Terimakasih</string>
+    <string name="finish_question_text">Silahkan klik Selanjutnya untuk memasukkan data ya</string>
+    <string name="finish_question_submit">Selanjutnya </string>
+
 
     // isi fitur nutrisi
     <string-array name="list_umur_bayi">
@@ -204,5 +258,4 @@
             Air: Pastikan bayi mendapatkan cukup air untuk hidrasi yang baik.
             Makanan yang Diperkaya: Seperti sereal yang diperkaya dengan vitamin B dan zat besi.</item>
     </string-array>
-
 </resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".view.forum.DetailForumActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Layout untuk konten artikel -->
+            <RelativeLayout
+                android:id="@+id/layout_article_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Layout user -->
+                <LinearLayout
+                    android:id="@+id/layoutuser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:background="@drawable/namebg">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/user_avatar"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="8dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ibu"
+                        app:riv_corner_radius="30dp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/nama"
+                        android:textSize="11sp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <!-- Gambar artikel -->
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_detail_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@id/layoutuser"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/image_dicoding"
+                    app:riv_corner_radius="30dp" />
+
+                <!-- Judul artikel -->
+                <TextView
+                    android:id="@+id/tv_detail_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_detail_photo"
+                    android:layout_marginTop="16dp"
+                    android:textSize="16sp"
+                    android:text="title" />
+
+                <!-- Deskripsi artikel -->
+                <TextView
+                    android:id="@+id/tv_detail_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_detail_title"
+                    android:layout_marginTop="16dp"
+                    android:textSize="16sp"
+                    android:text="@string/deskripsi" />
+
+            </RelativeLayout>
+
+            <!-- RecyclerView untuk komentar -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_article_content"
+                android:layout_marginTop="16dp"
+            android:paddingTop="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_commentcard" />
+
+            <!-- Input teks untuk komentar -->
+            <EditText
+                android:id="@+id/et_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rvComments"
+                android:layout_marginTop="16dp"
+                android:hint="Ketik komentar Anda di sini..."
+                android:inputType="textMultiLine"
+                android:maxLines="3" />
+
+            <!-- Tombol kirim komentar -->
+            <Button
+                android:id="@+id/btn_send_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_comment"
+                android:layout_marginTop="8dp"
+                android:text="Kirim"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

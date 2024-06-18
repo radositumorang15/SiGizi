@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-parcelize")
 }
 
 android {
@@ -77,4 +78,8 @@ dependencies {
     implementation("com.makeramen:roundedimageview:2.3.0")
     implementation("androidx.paging:paging-runtime:3.1.1")
     implementation("androidx.paging:paging-common:3.1.1")
+    implementation ("androidx.cardview:cardview:1.0.0")
+    implementation ("com.quickbirdstudios:surveykit:1.1.0")
+    implementation ("com.auth0:java-jwt:3.18.2")
+
 }

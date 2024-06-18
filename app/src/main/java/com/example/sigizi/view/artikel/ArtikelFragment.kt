@@ -1,29 +1,63 @@
 package com.example.sigizi.view.artikel
+
+import ListArticleAdapter
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.sigizi.R
-import com.example.sigizi.databinding.FragmentArtikelBinding
-import com.example.sigizi.view.forum.ArtikelViewModel
-
+import com.example.sigizi.di.ViewModelFactory
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 class ArtikelFragment : Fragment() {
 
-    private var _binding: FragmentArtikelBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    private lateinit var adapter: ListArticleAdapter
+    private val viewModel: ArtikelViewModel by viewModels {
+        ViewModelFactory(requireContext())
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        ViewModelProvider(this).get(ArtikelViewModel::class.java)
-
+    ): View? {
         return inflater.inflate(R.layout.fragment_artikel, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setupRecyclerView(view)
+        observeViewModel()
+
+        val createArticleButton: FloatingActionButton = view.findViewById(R.id.create_article)
+        createArticleButton.setOnClickListener {
+            val intent = Intent(requireContext(), ArtikelActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun setupRecyclerView(view: View) {
+        val recyclerView: RecyclerView = view.findViewById(R.id.rvArticle)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        adapter = ListArticleAdapter()
+        recyclerView.adapter = adapter
+    }
+
+    private fun observeViewModel() {
+        viewModel.articles.observe(viewLifecycleOwner, Observer { articles ->
+            articles?.let {
+                adapter.submitList(it)
+            }
+        })
+
+        viewModel.isLoading.observe(viewLifecycleOwner, Observer { isLoading ->
+            // Handle loading state if needed
+        })
     }
 }

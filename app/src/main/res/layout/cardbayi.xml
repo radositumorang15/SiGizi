@@ -59,16 +59,26 @@
                 app:layout_constraintTop_toBottomOf="@id/imageView"
                 app:layout_constraintStart_toStartOf="parent"/>
             <!-- TextView below ImageView -->
-            <TextView
-                android:id="@+id/textname2"
+            <LinearLayout
+                android:id="@+id/layoutuser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Stunting"
-                android:textSize="8sp"
-                android:textAppearance="?attr/textAppearanceBodyMedium"
-                android:textColor="?android:attr/textColorSecondary"
-                app:layout_constraintTop_toBottomOf="@+id/textname"
-                app:layout_constraintStart_toStartOf="parent"/>
+                android:layout_gravity="bottom"
+                android:background="@drawable/namebg"
+                android:orientation="horizontal"
+                android:padding="2sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textname">
+
+                <TextView
+                    android:id="@+id/tv_detail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Stunting"
+                    android:textColor="@color/white"
+                    android:textSize="8sp" />
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

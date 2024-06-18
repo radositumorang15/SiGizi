@@ -5,56 +5,129 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.sigizi.R
+import androidx.lifecycle.lifecycleScope
+import com.example.sigizi.data.response.UserResponse
+import com.example.sigizi.databinding.FragmentProfileBinding
+import com.example.sigizi.data.pref.UserModel
+import com.example.sigizi.data.pref.UserPreference
+import com.example.sigizi.repository.UserRepository
+import com.example.sigizi.di.Injection
+import kotlinx.coroutines.flow.firstOrNull
+import kotlinx.coroutines.launch
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ProfileFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ProfileFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    private var _binding: FragmentProfileBinding? = null
+    private val binding get() = _binding!!
+
+    private val userRepository: UserRepository by lazy {
+        Injection.provideUserRepository(requireContext())
     }
+
+    private var userSession: UserModel? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+    ): View {
+        _binding = FragmentProfileBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ProfileFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ProfileFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setupViews()
+
+        loadUserSession()
+        fetchUserProfile()
+
+        binding.buttonupdateprofile.setOnClickListener {
+            val name = binding.namaInputEditText.text.toString().trim()
+            val email = binding.emailInputEditText.text.toString().trim()
+            updateUserProfile(name, email)
+        }
+
+        binding.logoutbutton.setOnClickListener {
+            logout()
+        }
+
+        binding.deletebutton.setOnClickListener {
+            // Implement delete account logic here
+        }
+    }
+
+    private fun setupViews() {
+        // Set up your views here
+    }
+
+    private fun loadUserSession() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            userRepository.getSession().collect { userModel ->
+                userSession = userModel
+                // Populate user session data if needed
             }
+        }
+    }
+
+    private fun fetchUserProfile() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            try {
+                val tokenValue = UserPreference.getToken(requireContext()).firstOrNull()
+                if (tokenValue != null) {
+                    val response = userRepository.getUserProfile("Bearer $tokenValue")
+                    if (response.isSuccessful) {
+                        val userProfile = response.body()
+                        populateUserProfile(userProfile)
+                    } else {
+                        // Handle error
+                    }
+                } else {
+                    // Handle case when token is null
+                }
+            } catch (e: Exception) {
+                // Handle exception
+            }
+        }
+    }
+
+    private fun updateUserProfile(name: String, email: String) {
+        viewLifecycleOwner.lifecycleScope.launch {
+            try {
+                val tokenValue = UserPreference.getToken(requireContext()).firstOrNull()
+                if (tokenValue != null) {
+                    val user = UserResponse("", name, email)
+                    val response = userRepository.updateUserProfile("Bearer $tokenValue", user)
+                    if (response.isSuccessful) {
+                        // Profile updated successfully
+                        fetchUserProfile() // Refresh profile data
+                    } else {
+                        // Handle error
+                    }
+                } else {
+                    // Handle case when token is null
+                }
+            } catch (e: Exception) {
+                // Handle exception
+            }
+        }
+    }
+
+    private fun logout() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            userRepository.clearSession()
+            loadUserSession()
+        }
+    }
+
+    private fun populateUserProfile(user: UserResponse?) {
+        user?.let {
+            binding.namaInputEditText.setText(it.name)
+            binding.emailInputEditText.setText(it.email)
+        }
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

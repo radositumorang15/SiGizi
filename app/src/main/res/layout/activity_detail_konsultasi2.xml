@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.konsultasi.DetailKonsultasiActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutatas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/content_description_media"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/bayi" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Satrio Wicaksono"
+            android:textSize="17sp"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="@color/white"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:id="@+id/labels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/namebg"
+            android:orientation="horizontal"
+            android:padding="2sp">
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Stunting"
+                android:textColor="@color/white"
+                android:textSize="8sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutuser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:id="@+id/beratbadan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/glass_morph_background"
+                android:orientation="horizontal"
+                android:padding="2sp"
+                android:layout_marginEnd="2sp">
+
+                <TextView
+                    android:id="@+id/bb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="32 Kg"
+                    android:textColor="@color/white"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lingkarkepala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/glass_morph_background"
+                android:orientation="horizontal"
+                android:layout_marginEnd="2sp"
+                android:padding="2sp">
+
+                <TextView
+                    android:id="@+id/lk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="40 Cm"
+                    android:textColor="@color/white"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tinggibadan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/glass_morph_background"
+                android:layout_marginEnd="2sp"
+                android:orientation="horizontal"
+                android:padding="2sp">
+
+                <TextView
+                    android:id="@+id/pb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="30 Cm"
+                    android:textColor="@color/white"
+                    android:textSize="8sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <!-- Card view 1 -->
+    <LinearLayout
+        android:id="@+id/basecard"
+        android:layout_width="360dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/rounded_background"
+        android:orientation="horizontal"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutatas">
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/inner_card"
+        android:layout_width="360dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="195dp"
+        app:cardBackgroundColor="@color/secondprimary"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20sp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:textColor="@color/white"
+                android:text="Keterangan"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ideal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This is the inner card content."
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <!-- Card view 2 -->
+    <LinearLayout
+        android:id="@+id/basecard2"
+        android:layout_width="360dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rounded_background"
+        android:orientation="horizontal"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/basecard">
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/inner_card2"
+        android:layout_width="360dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="380dp"
+        app:cardBackgroundColor="@color/secondprimary"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20sp">
+
+            <TextView
+                android:id="@+id/tv_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:text="Suggestion"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/suggestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This is the inner card content."
+                android:textColor="@color/white"
+                android:textSize="8sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/HomeButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="Kembali Ke Home"
+        app:backgroundTint="@color/secondprimary"
+        app:cornerRadius="10dp"
+        app:iconSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inner_card2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

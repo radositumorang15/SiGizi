@@ -49,9 +49,6 @@ class WelcomeActivity : AppCompatActivity() {
             startActivity(Intent(this, SignupActivity::class.java))
         }
 
-        binding.button2.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
-        }
     }
 
 }

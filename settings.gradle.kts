@@ -7,6 +7,7 @@ pluginManagement {
                 includeGroupByRegex("androidx.*")
             }
         }
+        maven { url = uri("https://jcenter.bintray.com/") }
         mavenCentral()
         gradlePluginPortal()
     }
@@ -16,9 +17,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://jcenter.bintray.com/") }
     }
 }
 
 rootProject.name = "SiGizi"
 include(":app")
- 

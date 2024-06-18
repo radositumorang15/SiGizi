@@ -7,127 +7,44 @@
     tools:context=".ui.notifications.NotificationsFragment">
 
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp">
+        android:layout_marginTop="20dp"
+        android:text="Forum"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Bagikan Pengalaman Bunda"
+        app:layout_constraintBottom_toTopOf="@+id/rvForum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-            <!-- Media -->
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="120dp">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                app:srcCompat="@drawable/stunting"
-                android:scaleType="centerCrop"
-                android:contentDescription="@string/content_description_media"
-                />
-
-                <LinearLayout
-                    android:id="@+id/layoutuser"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/namebg"
-                    android:orientation="horizontal"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginStart="2dp"
-                    android:padding="2sp">
-
-                    <com.makeramen.roundedimageview.RoundedImageView
-                        android:id="@+id/user_avatar"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginEnd="1dp"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:src="@drawable/avatar"
-                        app:riv_corner_radius="30dp" />
-
-                    <TextView
-                        android:id="@+id/tv_detail_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="@string/nama"
-                        android:textColor="@color/white"
-                        android:textSize="8sp" />
-                </LinearLayout>
-
-            </FrameLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:background="@drawable/bg_3">
-
-                <!-- Title, secondary and supporting text -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title"
-                    android:textAppearance="?attr/textAppearanceTitleMedium"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/secondary_text"
-                    android:textAppearance="?attr/textAppearanceBodyMedium"
-                    android:textColor="?android:attr/textColorSecondary"
-                    />
-
-            </LinearLayout>
-
-            <!-- Buttons -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:orientation="horizontal">
-
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
-                    app:icon="@drawable/heart_icon"
-                    app:iconGravity="textStart"
-                    app:iconPadding="0dp"
-                    app:iconTint="@color/white"
-                    android:backgroundTint="@color/secondprimary"
-                    android:textColor="@color/white"
-                    android:padding="0dp"/>
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
-                    app:icon="@drawable/blogger"
-                    app:iconGravity="textStart"
-                    app:iconPadding="0dp"
-                    app:iconTint="@color/white"
-                    android:backgroundTint="@color/secondprimary"
-                    android:textColor="@color/white"
-                    android:padding="0dp"/>
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvForum"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView5" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/create_story"
+        android:id="@+id/create_forum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -138,5 +55,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:tint="@color/white" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.459"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
