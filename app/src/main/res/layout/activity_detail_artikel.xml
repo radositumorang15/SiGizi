@@ -23,6 +23,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/image_dicoding"
             app:riv_corner_radius="30dp"/>
+
         <TextView
             android:id="@+id/tv_detail_title"
             android:layout_width="wrap_content"
@@ -39,6 +40,17 @@
             android:layout_below="@id/tv_detail_title"
             android:layout_marginTop="16dp"
             android:textSize="16sp"
+            android:text="@string/deskripsi"/>
+
+
+        <TextView
+            android:id="@+id/source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_detail_description"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/navi"
             android:text="@string/deskripsi"/>
 
     </RelativeLayout>

@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.sigizi.databinding.FragmentHomeBinding
 import com.example.sigizi.di.ViewModelFactory
+import com.example.sigizi.view.artikel.DetailArtikelActivity
+import com.example.sigizi.view.history.HistoryActivity
 import com.example.sigizi.view.konsultasi.ActivityKonsultasi
 import com.example.sigizi.view.nutrisi.NutrisiActivity
 
@@ -46,6 +48,12 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireActivity(), NutrisiActivity::class.java)
             startActivity(intent)
         }
+
+        binding.imageView2Section.setOnClickListener {
+            val intent = Intent(requireContext(), HistoryActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     override fun onDestroyView() {

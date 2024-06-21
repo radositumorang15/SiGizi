@@ -49,6 +49,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
                     android:text="This is a short summary of the article to give readers an overview of the content."
                     android:textColor="@android:color/black"
                     android:textSize="12sp" />

@@ -24,4 +24,5 @@ class HomeViewModel(private val userRepository: UserRepository) : ViewModel() {
             }
         }
     }
+
 }

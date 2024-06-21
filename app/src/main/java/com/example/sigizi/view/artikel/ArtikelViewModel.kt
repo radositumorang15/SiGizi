@@ -1,16 +1,13 @@
 package com.example.sigizi.view.artikel
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.example.sigizi.data.response.Article
-import com.example.sigizi.repository.ArticleRepository
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import okhttp3.MultipartBody
+import com.example.sigizi.R
+import com.example.sigizi.data.pref.Article
 
-class ArtikelViewModel(private val repository: ArticleRepository) : ViewModel() {
+class ArtikelViewModel(application: Application) : AndroidViewModel(application) {
 
     private val _articles = MutableLiveData<List<Article>>()
     val articles: LiveData<List<Article>>
@@ -21,24 +18,29 @@ class ArtikelViewModel(private val repository: ArticleRepository) : ViewModel() 
         get() = _isLoading
 
     init {
-        fetchArticles()
+        fetchArticlesFromResources()
     }
 
-    fun fetchArticles() {
-        viewModelScope.launch {
-            _isLoading.value = true
-            try {
-                val articlesList = repository.getAllArticles()
-                _articles.value = articlesList
-            } catch (e: Exception) {
-                e.printStackTrace()
-            } finally {
-                _isLoading.value = false
-            }
+    private fun fetchArticlesFromResources() {
+        _isLoading.value = true
+
+        val titles = getApplication<Application>().resources.getStringArray(R.array.articleTitle)
+        val images = getApplication<Application>().resources.obtainTypedArray(R.array.articleImage)
+        val summaries = getApplication<Application>().resources.getStringArray(R.array.articleSummary)
+        val sources = getApplication<Application>().resources.getStringArray(R.array.articlelink)
+
+        val articlesList = mutableListOf<Article>()
+        for (i in titles.indices) {
+            val article = Article(
+                title = titles[i],
+                body = summaries[i],
+                source = sources[i],
+                imageUrl = images.getResourceId(i, R.drawable.noimage) // Use default image if not found
+            )
+            articlesList.add(article)
         }
-    }
-
-    fun refreshArticles() {
-        fetchArticles()
+        images.recycle()
+        _articles.value = articlesList
+        _isLoading.value = false
     }
 }

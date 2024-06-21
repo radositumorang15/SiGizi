@@ -9,8 +9,10 @@ import com.example.sigizi.data.response.LoginRequest
 import com.example.sigizi.data.response.LoginResponse
 import com.example.sigizi.data.response.RegisterRequest
 import com.example.sigizi.data.response.RegisterResponse
+import com.example.sigizi.data.response.User
 import com.example.sigizi.data.response.UserResponse
 import kotlinx.coroutines.flow.Flow
+import okhttp3.ResponseBody
 import retrofit2.Response
 
 class UserRepository(private val apiService: ApiService, private val context: Context) {
@@ -72,7 +74,7 @@ class UserRepository(private val apiService: ApiService, private val context: Co
         return apiService.getUserProfile(token)
     }
 
-    suspend fun updateUserProfile(token: String, user: UserResponse): Response<UserResponse> {
+    suspend fun updateUserProfile(token: String, user: User): Response<UserResponse> {
         return apiService.updateUserProfile(token, user)
     }
 }

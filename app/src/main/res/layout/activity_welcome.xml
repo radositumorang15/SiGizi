@@ -127,7 +127,7 @@
         app:altSrc="@drawable/ic_circle_full_24"
         app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toStartOf="@+id/menu2"
-    app:layout_constraintTop_toBottomOf="@id/imageView"
+    app:layout_constraintTop_toBottomOf="@id/descMenu1"
     app:layout_constraintHorizontal_bias="0.5"
     app:srcCompat="@drawable/ic_circle_24"
     app:tint="@color/grey"/>

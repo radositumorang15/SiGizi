@@ -32,66 +32,49 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title">Stunting pada anak 2 bulan</string>
     <string name="content_description_media">Image</string>
-    <string name="action_1"></string>
-    <string name="action_2"></string>
     <string name="secondary_text">anak saya sudah stunting dan terkadang tidak nafsu makan</string>
 
-
+    //surveykit
     <string name="yes">Ya</string>
     <string name="no">Tidak</string>
-
     <string name="intro_title">Selamat Datang di Aplikasi siGizi!</string>
     <string name="intro_text">Kami senang Anda bergabung dalam upaya meningkatkan kesehatan dan gizi keluarga. Yuk isi pertanyaan berikut</string>
     <string name="intro_start">Ayo!</string>
-
     <string name="pertanyaan2">Apakah anak Anda mengalami pertumbuhan yang lambat dibandingkan anak-anak seusianya?</string>
-
     <string name="pertanyaan3">Apakah tinggi badan anak Anda lebih rendah dari rata-rata anak seusianya?</string>
-
-
     <string name="pertanyaan4">Bagaimana pola makan anak Anda sehari-hari? (Pilih semua yang sesuai)</string>
     <string name="makanan1">Cukup protein (daging, ikan, telur)</string>
     <string name="makanan2">Cukup sayur dan buah</string>
     <string name="makanan3">Banyak karbohidrat (nasi, roti)</string>
     <string name="makanan4">Kurang bervariasi</string>
-
     <string name="pertanyaan5">Apakah anak Anda mendapatkan ASI eksklusif selama 6 bulan pertama?</string>
-
     <string name="pertanyaan6">Seberapa sering anak Anda mengalami sakit (seperti diare, infeksi saluran pernapasan) dalam 6 bulan terakhir?</string>
     <string name="sering">Sangat sering</string>
     <string name="sering1">Cukup sering</string>
     <string name="sering2">Jarang</string>
     <string name="sering3">Tidak Pernah</string>
-
-
     <string name="names">Siapakah nama anak anda?</string>
     <string name="name1">nama lengkan atau nama panggilan</string>
     <string name="laki">Laki-Laki</string>
     <string name="cewek">Perempuan</string>
-
     <string name="gender">Jenis kelamin</string>
     <string name="gender1">Jenis kelamin anak anda?</string>
-
     <string name="umur">Berapa umur anak anda?</string>
     <string name="umur1">Umur dalam bentuk bulan</string>
-
     <string name="beratbadan">Berat badan anak?</string>
     <string name="how_fat_question_text" />
     <string name="how_fat_min">2</string>
     <string name="how_fat_max">13</string>
-
     <string name="lingkarkepala">Lingkar Kepala anak?</string>
     <string name="min">33</string>
     <string name="max">50</string>
-
     <string name="tinggibadan">Tinggi anak?</string>
     <string name="mins">33</string>
     <string name="maxs">50</string>
-
-
     <string name="finish_question_title">Sudah Selesai Terimakasih</string>
     <string name="finish_question_text">Silahkan klik Selanjutnya untuk memasukkan data ya</string>
     <string name="finish_question_submit">Selanjutnya </string>
+
 
 
     // isi fitur nutrisi
@@ -258,4 +241,118 @@
             Air: Pastikan bayi mendapatkan cukup air untuk hidrasi yang baik.
             Makanan yang Diperkaya: Seperti sereal yang diperkaya dengan vitamin B dan zat besi.</item>
     </string-array>
+
+
+    //artikel
+    <string-array name="articleTitle">
+        <item>Cara Mencegah Stunting</item>
+        <item>Ciri Anak Stunting yang Harus Diwaspadai</item>
+        <item>Mari Mengenal Stunting</item>
+        <item>5 Peran Ibu dalam Mencegah Stunting Sejak Masa Sekarang</item>
+        <item>IDI ingatkan ibu hamil jaga nutrisi-periksa kandungan cegah stunting</item>
+    </string-array>
+
+    <string-array name="articleImage">
+        <item>@drawable/stunting1</item>
+        <item>@drawable/stunting2</item>
+        <item>@drawable/stunting3</item>
+        <item>@drawable/stunting4</item>
+        <item>@drawable/stunting5</item>
+    </string-array>
+
+    <string-array name="articleSummary">
+        <item>Stunting menjadi momok mengerikan karena tidak hanya tinggi badan kurang dari standar saja, tetapi juga dapat menyebabkan kerusakan otak dan penyakit kronis.
+Dalam mencegah stunting, diperlukan usaha kolektif dari berbagai pihak. Dimulai dari peran keluarga hingga pemerintah, bahkan sejak janin berada di kandungan, ibu hamil sudah harus memulai usaha untuk mencegah stunting untuk bayinya yang akan lahir kelak.Yang Bisa Dilakukan Anak - anakTerapkan pola hidup sehat seperti menghindari konsumsi rokok dan NAPZATerapkan gizi seimbangDiberikan ilmu tentang kesehatan reproduksi</item>
+        <item>Kondisi itu dipicu oleh malnutrisi dalam jangka waktu lama dan umumnya terjadi pada anak di bawah usia 5 tahun. Tak hanya membuat anak memiliki perawakan pendek, stunting juga bisa mengurangi kemampuan kognitif dan kecerdasan otak.
+
+Jika ciri anak stunting baru diketahui saat anak sudah berusia 2 tahun atau lebih, stunting cenderung tidak bisa diatasi sama sekali. Maka itu, Mama dan Papa perlu memperhatikan ciri-ciri anak stunting agar bisa segera melakukan penanganan. Mama dan Papa dapat mencari lebih banyak informasi tentang stunting dengan berkonsultasi dengan dokter spesialis anak, ya.
+
+Berikut beberapa gejala stunting pada anak yang wajib diwaspadai:
+Bertumbuh pendek
+Sering sakit
+Menurunkan kemampuan kognotif
+Gangguan Endokrin
+Berat Badan Cenderung Berkurang
+Wajah Lebih Muda dari anak Seusianya
+Anak Lebih Pendiam
+Telat Menstruasi
+Pertumbuhan gigi Lambat
+</item>
+        <item>Stunting adalah gangguan pertumbuhan dan perkembangan anak akibat kekurangan gizi dalam jangka panjang. Stunting bisa disebabkan oleh malnutrisi yang dialami ibu saat hamil, atau anak pada masa pertumbuhannya.
+Selain itu, perkembangan anak yang stunting biasanya terlambat secara signifikan. Sementara di sisi lain, anak yang sehat umumnya tidak mengalami keterlambatan perkembangan meski perawakannya pendek.
+
+Penyebab Stunting
+Penyebab utama stunting adalah malnutrisi dalam jangka panjang (kronis). Beberapa kondisi yang bisa menyebabkan anak kekurangan nutrisi adalah:
+Ibu mengalami malnutrisi atau terserang infeksi selama hamil
+Anak tidak mendapatkan ASI eksklusif
+Kualitas gizi MPASI yang kurang
+Anak menderita penyakit yang menghalangi penyerapan nutrisi, seperti alergi susu sapi atau sindrom malabsorbsi
+Anak menderita infeksi kronis, seperti tuberkulosis atau cacingan
+Anak memiliki penyakit bawaan, seperti penyakit jantung bawaan atau thalasemia
+</item>
+        <item>Peran ibu dalam mencegah stunting, sebagai Kartini masa depan, bukan dimulai ketika anak dilahirkan, melainkan jauh sebelumnya. Lakukan 10 langkah pencegahan stunting ini untuk menjaga buah hati kita dari risiko stunting.
+
+Perbaiki sebelum Anak Berusia 2 tahun
+Pencegahan stunting dilakukan sejak masa 1000 hari pertama kehidupan, yaitu sejak awal pembuahan, kehamilan, sampai anak berusia 2 tahun. Selama kehamilan ibu bisa melakukan hal-hal berikut ini untuk mengurangi risiko kekurangan gizi bagi ibu hamil dan janin yang dikandung.
+Rutin Melakukan Pemeriksaan
+
+Lakukan pemeriksaan kehamilan di fasilitas kesehatan minimal 6 kali, dengan minimal 2 kali pemeriksaan oleh dokter atau bidan pada trimester 1 dan 3. Tujuannya untuk memastikan kesehatan ibu hamil dan memantau pertumbuhan janin dalam kandungan. Jika ditemukan adanya kelainan atau gangguan dalam pertumbuhan, ibu hamil bisa segera mendapatkan penanganan sedini mungkin yang tepat.
+
+Minum Tablet Tambah Darah (TTD)
+
+Ibu harus mengkonsumsi TTD setiap hari selama kehamilan, minimal 90 tablet. Pastikan kandungan TTD sedikitnya berisi 60 mg zat besi dan 400 microgram asam folat. Tujuannya untuk mengurangi risiko kekurangan zat gizi pada ibu hamil dan janin dalam kandungan.
+
+Mengikuti Konseling
+
+Konseling membantu ibu hamil mengatasi gejolak emosi dan psikologis yang dirasakan selama kehamilan. Ibu hamil juga perlu mengikuti kelas ibu hamil untuk mendapatkan perawatan kehamilan, yang bisa membantu Ibu memastikan tumbuh kembang janin yang sehat.
+
+Berikan Air Susu Ibu (ASI)
+Air susu ibu (ASI) memiliki semua kandungan gizi, makronutrien dan mikronutrien, yang dibutuhkan bayi untuk tumbuh kembang secara optimal. Ibu harus memberikan Inisiasi Menyusu Dini (IMD) segera setelah persalinan dan skin-to-skin contact minimal selama 1 jam.
+
+Kemudian berikan ASI secara eksklusif hingga bayi berusia 6 bulan dan meneruskannya hingga usia 2 tahun.
+Posisi Menyusui
+Saat menyusui pastikan posisi ibu tepat, karena bisa mengoptimalkan pemberian ASI dan menghindari puting lecet. Perbaiki posisi menyusui dengan memastikan kepala dan mulut bayi melekat pas pada payudara.
+Protein Hewani pada MPASI
+Saat bayi berusia 6 bulan, Ibu perlu melengkapi nutrisi dari ASI dengan makanan pendamping ASI (MPASI). Makanan yang diberikan harus mengandung gizi seimbang dan lengkap, terutama protein hewani. Berikan cukup protein hewani sedini mungkin, seperti ikan, telur, susu, daging ayam dan daging sapi, untuk mendukung tumbuh kembang optimalnya.
+
+
+BACA: Buku Resep Makanan Lokal
+
+
+
+Rutin Imunisasi
+Tujuan imunisasi adalah melindungi anak dari berbagai penyakit, karena kekebalan tubuhnya masih lemah. Pastikan si kecil mendapatkan imunisasi lengkap sesuai jadwal. Anak yang sakit-sakitan lebih rentan terkena stunting. karena gizi dan energinya lebih banyak digunakan untuk pemulihan daripada pertumbuhan. </item>
+        <item>Medan (ANTARA) - Ikatan Dokter Indonesia (IDI) Medan mengingatkan ibu hamil agar menjaga nutrisi dan rutin memeriksakan kandungan untuk mencegah stunting.
+
+"Penanganan stunting bukan saat anak itu lahir, tetapi justru ketika masih di dalam kandungan," ujar Ketua Ikatan Dokter Indonesia (IDI) Medan dr Ery Suhaymi Sp B, MKed (Surg), FINACS, FICS di Medan, Sabtu.
+
+Nutrisi yang cukup, kata Ery, membuat perkembangan janin dalam kandungan bisa optimal.
+
+Namun, dia menilai itu mesti diiringi dengan pemeriksaan rutin ke dokter kandungan supaya kesehatan janin dapat dipantau.
+
+"Ada namanya pemeriksaan kehamilan rutin pada ibu hamil dan itu selalu disarankan dokter. Selain menjaga kesehatan janin dan perkembangannya, hal itu juga untuk melihat kecukupan nutrisi ibu," kata dia.</item>
+    </string-array>
+
+
+    <string-array name="articlelink">
+        <item>https://ayosehat.kemkes.go.id/cegah-stunting-itu-penting</item>
+        <item>https://ayosehat.kemkes.go.id/peran-ibu-cegah-stunting</item>
+        <item>https://www.unicef.org/indonesia/id/dokumen/kerangka-aksi-untuk-gizi-ibu-dan-makanan-pendamping-asi?gad_source=1gclid=CjwKCAjwg8qzBhAoEiwAWagLrDF6JlNDYcXKIwTZi-_zASSDLI7haEu7k-HsGszg4LoKvxIfe5jurxoCWEAQAvD_BwE</item>
+        <item>https://ayosehat.kemkes.go.id/peran-ibu-cegah-stunting</item>
+        <item>https://www.antaranews.com/berita/4078431/idi-ingatkan-ibu-hamil-jaga-nutrisi-periksa-kandungan-cegah-stunting</item>
+    </string-array>
+
+    <string name="homeartikeljudul">Mari Mengenal Stunting</string>
+    <string name="homeartikel">Stunting adalah gangguan pertumbuhan dan perkembangan anak akibat kekurangan gizi dalam jangka panjang. Stunting bisa disebabkan oleh malnutrisi yang dialami ibu saat hamil, atau anak pada masa pertumbuhannya.
+Selain itu, perkembangan anak yang stunting biasanya terlambat secara signifikan. Sementara di sisi lain, anak yang sehat umumnya tidak mengalami keterlambatan perkembangan meski perawakannya pendek.
+
+Penyebab Stunting
+Penyebab utama stunting adalah malnutrisi dalam jangka panjang (kronis). Beberapa kondisi yang bisa menyebabkan anak kekurangan nutrisi adalah:
+Ibu mengalami malnutrisi atau terserang infeksi selama hamil
+Anak tidak mendapatkan ASI eksklusif
+Kualitas gizi MPASI yang kurang
+Anak menderita penyakit yang menghalangi penyerapan nutrisi, seperti alergi susu sapi atau sindrom malabsorbsi
+Anak menderita infeksi kronis, seperti tuberkulosis atau cacingan
+Anak memiliki penyakit bawaan, seperti penyakit jantung bawaan atau thalasemia</string>
+
 </resources>

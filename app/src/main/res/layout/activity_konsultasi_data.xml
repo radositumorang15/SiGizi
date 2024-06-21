@@ -14,7 +14,8 @@
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:paddingTop="16dp"
-        android:paddingBottom="16dp">
+        android:paddingBottom="16dp"
+        android:layout_gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
@@ -23,7 +24,7 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="15dp"/>
 
         <!-- Nama -->
         <LinearLayout
@@ -66,7 +67,7 @@
                 android:id="@+id/umurTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Umur"
+                android:text="Umur dalam bulan Contoh 12 = 1 Tahun"
                 android:textColor="@color/secondprimary" />
 
             <com.google.android.material.textfield.TextInputLayout

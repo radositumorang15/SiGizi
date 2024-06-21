@@ -39,7 +39,7 @@
             android:layout_marginTop="8dp"
             android:scaleType="centerCrop"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/nutrisi"
+            android:src="@drawable/nutrisi1"
             app:riv_corner_radius="30dp"/>
         <TextView
             android:id="@+id/nutrisi"

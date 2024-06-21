@@ -3,10 +3,8 @@ package com.example.sigizi.data.network
 import ConsultationData
 import PredictionResponse
 import com.example.sigizi.data.response.ApiResponse
-import com.example.sigizi.data.response.Article
-import com.example.sigizi.data.response.ArticleResponse
+import com.example.sigizi.data.response.Child
 import com.example.sigizi.data.response.CommentRequest
-import com.example.sigizi.data.response.CreateArticleRequest
 import com.example.sigizi.data.response.CreateForumRequest
 import com.example.sigizi.data.response.Forum
 import com.example.sigizi.data.response.ForumApiResponse
@@ -15,6 +13,7 @@ import com.example.sigizi.data.response.LoginRequest
 import com.example.sigizi.data.response.LoginResponse
 import com.example.sigizi.data.response.RegisterRequest
 import com.example.sigizi.data.response.RegisterResponse
+import com.example.sigizi.data.response.User
 import com.example.sigizi.data.response.UserResponse
 import okhttp3.MultipartBody
 import retrofit2.Response
@@ -39,36 +38,6 @@ interface ApiService {
     suspend fun login(
         @Body request: LoginRequest
     ): Response<LoginResponse>
-
-    @POST("articles")
-    suspend fun createArticle(
-        @Header("Authorization") token: String,
-        @Body request: CreateArticleRequest
-    ): Response<ArticleResponse>
-
-    @Multipart
-    @POST("articles/{articleID}/upload")
-    suspend fun uploadArticleImage(
-        @Header("Authorization") token: String,
-        @Path("articleID") articleID: String,
-        @Part file: MultipartBody.Part
-    ): Response<ArticleResponse>
-
-    @DELETE("articles/{articleID}")
-    suspend fun deleteArticle(
-        @Header("Authorization") token: String,
-        @Path("articleID") articleID: String
-    ): Response<ArticleResponse>
-
-    @GET("articles")
-    suspend fun getAllArticles(): Response<ApiResponse<List<Article>>>
-
-    @GET("articles/{articleID}")
-    suspend fun getArticleById(
-        @Header("Authorization") token: String,
-        @Path("articleID") articleID: String
-    ): Response<ArticleResponse>
-
 
     @POST("articles")
     suspend fun createForum(
@@ -115,17 +84,32 @@ interface ApiService {
     @POST("predict")
     suspend fun predictConsultation(@Body consultationData: ConsultationData): Response<PredictionResponse>
 
-
-    // Tambahkan endpoint ini
     @GET("users")
     suspend fun getUserProfile(
         @Header("Authorization") token: String
     ): Response<UserResponse>
 
 
+
     @PUT("users/{userID}")
     suspend fun updateUserProfile(
         @Header("Authorization") token: String,
-        @Body user: UserResponse
+        @Body user: User
     ): Response<UserResponse>
+
+
+    @GET("childs")
+    suspend fun getAllChildren(@Header("Authorization") authHeader: String): Response<ApiResponse>
+
+    @GET("childs/{childID}")
+    suspend fun getChildById(
+        @Header("Authorization") token: String,
+        @Path("childID") childID: String
+    ): Response<Child>
+
+    @DELETE("childs/{childID}")
+    suspend fun deleteChild(
+        @Header("Authorization") token: String,
+        @Path("childID") childID: String
+    ): Response<Void>
 }

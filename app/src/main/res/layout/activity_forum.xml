@@ -35,9 +35,10 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/galleryButton"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginStart="130dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:gravity="center"
             android:text="Gallery"
             app:backgroundTint="@color/secondprimary"
@@ -45,6 +46,7 @@
             app:icon="@drawable/baseline_photo_library_24"
             app:iconGravity="textStart"
             app:iconSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/previewImageView" />
 
@@ -52,6 +54,7 @@
             android:id="@+id/titleInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:hint="Title"
             app:counterEnabled="true"
             app:counterMaxLength="50"
@@ -75,6 +78,7 @@
             android:layout_height="wrap_content"
             android:hint="Description"
             app:counterEnabled="true"
+            android:padding="10dp"
             app:counterMaxLength="1000"
             android:layout_marginTop="40dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -90,14 +94,11 @@
                 android:minLines="3" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <com.google.android.material.button.MaterialButton
             android:id="@+id/uploadButton"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="70dp"
-            android:layout_marginEnd="8dp"
             android:text="Upload"
             app:backgroundTint="@color/secondprimary"
             app:cornerRadius="10dp"

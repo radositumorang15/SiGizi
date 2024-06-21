@@ -36,7 +36,7 @@
                     android:layout_marginEnd="8dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:src="@drawable/ibu"
-                    app:riv_corner_radius="30dp" />
+                    app:riv_corner_radius="30dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -104,7 +104,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/thirdprimary"
             android:orientation="horizontal">
 
             <!-- First Section -->
@@ -121,14 +120,13 @@
 
                     <ImageView
                         android:id="@+id/imageView1"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_margin="16dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/consul" />
+                        app:srcCompat="@drawable/konsultasi" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -158,14 +156,13 @@
 
                     <ImageView
                         android:id="@+id/imageView2Section"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_margin="16dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/analysis" />
+                        app:srcCompat="@drawable/databayi" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
@@ -194,14 +191,13 @@
 
                     <ImageView
                         android:id="@+id/imageView3"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_margin="16dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/food" />
+                        app:srcCompat="@drawable/nutrisi1" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
@@ -229,6 +225,7 @@
         android:textStyle="bold"/>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/articlecardhome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -248,7 +245,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/aset2"
+                android:src="@drawable/stunting3"
                 android:layout_marginEnd="16dp" />
 
             <LinearLayout
@@ -262,7 +259,7 @@
                     android:id="@+id/articleTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sayur sayuran yang cocok untuk anak"
+                    android:text="@string/homeartikeljudul"
                     android:textColor="@android:color/black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -272,7 +269,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="This is a short summary of the article to give readers an overview of the content."
+                    android:maxLines="4"
+                    android:text="@string/homeartikel"
                     android:textColor="@android:color/black"
                     android:textSize="12sp" />
             </LinearLayout>

@@ -17,9 +17,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class ArtikelFragment : Fragment() {
 
     private lateinit var adapter: ListArticleAdapter
-    private val viewModel: ArtikelViewModel by viewModels {
-        ViewModelFactory(requireContext())
-    }
+    private val viewModel: ArtikelViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,12 +32,6 @@ class ArtikelFragment : Fragment() {
 
         setupRecyclerView(view)
         observeViewModel()
-
-        val createArticleButton: FloatingActionButton = view.findViewById(R.id.create_article)
-        createArticleButton.setOnClickListener {
-            val intent = Intent(requireContext(), ArtikelActivity::class.java)
-            startActivity(intent)
-        }
     }
 
     private fun setupRecyclerView(view: View) {
@@ -52,7 +44,7 @@ class ArtikelFragment : Fragment() {
     private fun observeViewModel() {
         viewModel.articles.observe(viewLifecycleOwner, Observer { articles ->
             articles?.let {
-                adapter.submitList(it)
+                adapter.setData(it)
             }
         })
 

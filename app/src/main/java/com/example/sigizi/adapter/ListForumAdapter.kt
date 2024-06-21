@@ -5,6 +5,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
@@ -16,7 +18,11 @@ import com.example.sigizi.data.response.Forum
 import com.example.sigizi.view.forum.DetailForumActivity
 
 
-class ListForumAdapter : ListAdapter<Forum, ListForumAdapter.ForumViewHolder>(ForumDiffCallback()) {
+class ListForumAdapter(
+    private val token: String,
+    private val currentUserId: String,
+    private val onDeleteClick: (Forum) -> Unit
+) : ListAdapter<Forum, ListForumAdapter.ForumViewHolder>(ForumDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ForumViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_forumcard, parent, false)
@@ -33,6 +39,7 @@ class ListForumAdapter : ListAdapter<Forum, ListForumAdapter.ForumViewHolder>(Fo
         private val summaryTextView: TextView = itemView.findViewById(R.id.body)
         private val forumImageView: ImageView = itemView.findViewById(R.id.imageView)
         private val nameTextView: TextView = itemView.findViewById(R.id.tv_detail_name)
+        private val deleteButton: Button = itemView.findViewById(R.id.DeleteButton)
 
         init {
             itemView.setOnClickListener {
@@ -44,6 +51,14 @@ class ListForumAdapter : ListAdapter<Forum, ListForumAdapter.ForumViewHolder>(Fo
                     itemView.context.startActivity(intent)
                 }
             }
+
+            deleteButton.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val forum = getItem(position)
+                    onDeleteClick(forum)
+                }
+            }
         }
 
         fun bind(forum: Forum) {
@@ -51,7 +66,7 @@ class ListForumAdapter : ListAdapter<Forum, ListForumAdapter.ForumViewHolder>(Fo
             summaryTextView.text = forum.body
 
             if (forum.User != null) {
-                nameTextView.text = forum.User.name ?: "Unknown User"
+                nameTextView.text = forum.User?.name ?: "Unknown User"
             } else {
                 nameTextView.text = "Unknown User"
             }
@@ -69,6 +84,12 @@ class ListForumAdapter : ListAdapter<Forum, ListForumAdapter.ForumViewHolder>(Fo
                     .centerCrop()
                     .into(forumImageView)
             }
+
+            if (forum.userID == currentUserId) {
+                deleteButton.visibility = View.VISIBLE
+            } else {
+                deleteButton.visibility = View.GONE
+            }
         }
     }
 
@@ -82,9 +103,8 @@ class ListForumAdapter : ListAdapter<Forum, ListForumAdapter.ForumViewHolder>(Fo
         }
     }
 
-    // Fungsi untuk mengurutkan daftar forum dari yang terbaru
     fun submitListWithSort(list: List<Forum>) {
-        val sortedList = list.sortedByDescending { it.createdAt } // Mengurutkan dari yang terbaru
+        val sortedList = list.sortedByDescending { it.createdAt }
         submitList(sortedList)
     }
 }

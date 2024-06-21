@@ -1,106 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:id="@+id/card"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/gradient"
+    android:backgroundTint="#80B9AD"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
 
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card"
-        android:layout_width="150dp"
+    <!-- ConstraintLayout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:background="@drawable/gradient"
-        android:backgroundTint="#80B9AD">
+        android:padding="8dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <!-- ImageView -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/bayi"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/content_description_media"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <!-- MaterialButton aligned to the end of the ImageView -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/glass_morph_background"
+            android:padding="0dp"
+            android:textColor="@color/white"
+            app:icon="@drawable/baseline_keyboard_arrow_right_24"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconTint="@color/white"
+            app:layout_constraintTop_toTopOf="@id/imageView"
+            app:layout_constraintBottom_toBottomOf="@id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- TextView below ImageView -->
+        <TextView
+            android:id="@+id/textname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Satrio Wicaksono"
+            android:textSize="17sp"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="?android:attr/textColorSecondary"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp">
+            android:padding="4dp"
+            app:layout_constraintTop_toBottomOf="@id/textname"
+            app:layout_constraintStart_toStartOf="parent">
 
-            <!-- ImageView -->
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/bayi"
-                android:scaleType="centerCrop"
-                android:contentDescription="@string/content_description_media"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-
-            <!-- MaterialButton aligned to the end of the ImageView -->
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/materialButton"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:background="@drawable/glass_morph_background"
-                android:padding="0dp"
-                android:textColor="@color/white"
-                app:icon="@drawable/baseline_keyboard_arrow_right_24"
-                app:iconGravity="textStart"
-                app:iconPadding="0dp"
-                app:iconTint="@color/white"
-                app:layout_constraintTop_toTopOf="@id/imageView"
-                app:layout_constraintBottom_toBottomOf="@id/imageView"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
-            <!-- TextView below ImageView -->
-            <TextView
-                android:id="@+id/textname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
-                android:text="Satrio Wicaksono"
-                android:textSize="17sp"
-                android:textAppearance="?attr/textAppearanceBodyMedium"
-                android:textColor="?android:attr/textColorSecondary"
-                app:layout_constraintTop_toBottomOf="@id/imageView"
-                app:layout_constraintStart_toStartOf="parent"/>
-            <!-- TextView below ImageView -->
+            <!-- LinearLayout containing TextView and MaterialButton -->
             <LinearLayout
                 android:id="@+id/layoutuser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
                 android:background="@drawable/namebg"
                 android:orientation="horizontal"
                 android:padding="2sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textname">
+                android:layout_marginTop="4dp">
 
                 <TextView
-                    android:id="@+id/tv_detail_name"
+                    android:id="@+id/label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
                     android:text="Stunting"
                     android:textColor="@color/white"
-                    android:textSize="8sp" />
+                    android:textSize="8sp"
+                    android:layout_gravity="center_vertical" />
+
             </LinearLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- MaterialButton with Icon on the right side -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/deleteButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="9dp"
+                android:background="@drawable/glass_morph_background"
+                android:backgroundTint="@color/secondprimary"
+                android:onClick="onDeleteButtonClick"
+                android:padding="0dp"
+                android:textColor="@android:color/white"
+                app:icon="@drawable/ic_delete_24"
+                app:iconGravity="textTop"
+                app:iconSize="20dp" />
 
-    </com.google.android.material.card.MaterialCardView>
+        </RelativeLayout>
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/create_story"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="92dp"
-        android:clickable="true"
-        android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="@color/secondprimary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@color/white" />
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
